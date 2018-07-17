@@ -12,6 +12,12 @@ export class GemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+  } 
 
+  addToCart() {
+    this.gem.inventory = this.gem.inventory-1;
+    if(this.gem.inventory == 0) {
+      this.gem.name = "SOLD OUT!!!"
+    }
+  }
 }
