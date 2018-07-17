@@ -7,4 +7,6 @@ export class GemModel {
     description?: string;
     fullImagePath: string;
     inventory: number;
+    colors: string[];
+
 }
