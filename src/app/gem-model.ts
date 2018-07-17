@@ -8,5 +8,4 @@ export class GemModel {
     fullImagePath: string;
     inventory: number;
     colors: string[];
-
 }

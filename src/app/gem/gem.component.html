@@ -16,9 +16,17 @@
     <div class="card-body">
       <h5 class="card-title">{{gem.name}}</h5>
       <p class="card-text">{{gem.description}}</p>
-      <p class="card-text">{{gem.price || currency}}</p>      
+      <p class="card-text">{{gem.price || currency}}</p>
+      <p class="card-text">Available colors</p>   
+      <ul class="card-text">
+        <li *ngFor = "let color of gem.colors">{{color}}</li>
+      </ul>   
     </div>
 
+    <select class="form-control">
+      <option *ngFor="let color of gem.colors">{{color}}</option>
+    </select>
+    
     <button *ngIf="gem.inventory > 0" class="btn btn-default">Add To Cart</button>
 
     <button *ngIf="gem.inventory <= 0" class="btn btn-danger" disabled>Sold Out</button>
