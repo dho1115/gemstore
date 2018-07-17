@@ -1,3 +1,27 @@
-<p>
-  tabs works!
-</p>
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class= "nav-link" href="#" (click) = "tab = 1">Description</a>
+  </li> 
+
+  <li class="nav-item">
+    <a class= "nav-link" href="#" (click) = "setTab(2)">Colors</a>
+  </li>
+
+  <li class="nav nav-item">
+    <a class= "nav-link" href="#" (click) = "setTab(3)">Reviews</a>
+  </li>
+</ul> 
+
+<div *ngIf="tab === 1">
+  Tab 1
+</div> 
+
+<div *ngIf="tab === 2">
+  Tab 2
+</div>
+
+<div *ngIf="tab === 3">
+  Tab 3
+</div>
+
+
