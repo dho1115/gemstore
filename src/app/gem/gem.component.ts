@@ -6,6 +6,7 @@ import {GemModel} from '../gem-model';
   templateUrl: './gem.component.html',
   styleUrls: ['./gem.component.css']
 })
+
 export class GemComponent implements OnInit {
   @Input() gem: GemModel;
 
