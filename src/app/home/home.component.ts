@@ -19,14 +19,14 @@ export class HomeComponent implements OnInit {
     colors: ["red,","green","blue"],
     reviews: [{
       id: 1,
-      createdate: 'Tuesday',
+      createddate: 'Tuesday',
       author: 'joe@codingtemple.com',
       rating: 5,
       body: 'I love this product!'
   },
    {
        id: 2,
-       createdate: 'Wednesday',
+       createddate: 'Wednesday',
        author: 'ripalp@codingtemple.com',
        rating: 1,
        body: 'I hate this product'
