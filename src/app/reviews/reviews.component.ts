@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { GemModel } from '../gem-model';
 //import { TouchSequence } from '../../../node_modules/@types/selenium-webdriver';
 import { ReviewModel } from '../review-model';
-//import {AvatarService} from '../avatar.service'
+import {AvatarService} from '../avatar.service'
 
 @Component({
   selector: 'app-reviews',
