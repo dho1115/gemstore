@@ -7,5 +7,7 @@ export class AvatarService {
 
   constructor() { }
 
-  return
+  getAvatar(email: string) {
+    return "https://2.gravatar.com/avatar" + email;
+  }
 }
