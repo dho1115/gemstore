@@ -1,4 +1,4 @@
-<!--
+
 <ul class="nav nav-pills">
   <li class="nav-item">
     <a class= "nav-link" href="#" (click) = "setTab(1)" [class.active] = "tab === 1">description</a>
@@ -11,21 +11,24 @@
   <li class="nav nav-item">
     <a class= "nav-link" href="#" (click) = "setTab(3)" [class.active] = "tab === 3">Reviews</a>
   </li>
-</ul> -->
+</ul>
 
-<!--replace tab = 1 with setTab(3)-->
+<div class="card-text" *ngIf="tab === 1">
+  <p>{{gem.description}}</p> 
+</div> 
 
-<!--
-<div *ngIf="tab === 1">
-  tab1 --> <!--This is what pops up when the user clicks the specified tab (in this case, tab 1). Now, if you want it return the gem's description, you use: {{gem.description}}-->
-<!--</div> 
+<div class="card-text" *ngIf="tab === 2">
+  <p >Available colors</p>  
+        <ul>
+          <li *ngFor = "let color of gem.colors">{{color}}</li> 
+        </ul> 
 
-<div *ngIf="tab === 2">
-  Tab 2
 </div>
 
 <div *ngIf="tab === 3">
-  Tab 3
-</div> -->
+  <app-reviews [gem] = "gem"></app-reviews>
+</div> 
 
 
+      
+      

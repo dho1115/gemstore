@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@Angular/forms'
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -7,6 +8,7 @@ import { GemComponent } from './gem/gem.component';
 import { WavePipe } from './wave.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { TabsComponent } from './tabs/tabs.component';
     GemComponent,
     WavePipe,
     NavbarComponent,
-    TabsComponent
+    TabsComponent,
+    ReviewsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

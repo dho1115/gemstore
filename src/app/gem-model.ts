@@ -1,4 +1,5 @@
 //gem-model.ts
+import {ReviewModel} from './review-model';
 
 export class GemModel {
     id: number;
@@ -8,4 +9,5 @@ export class GemModel {
     fullImagePath: string;
     inventory: number;
     colors: string[];
+    reviews?: ReviewModel[];
 }

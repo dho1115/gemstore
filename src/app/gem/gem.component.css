@@ -1,0 +1,12 @@
+
+.red {
+    filter: hue-rotate(-45 deg);
+} 
+
+.green {
+    filter: hue-rotate(100 deg);
+} 
+
+.blue {
+    filter: hue-rotate(200 deg);
+}

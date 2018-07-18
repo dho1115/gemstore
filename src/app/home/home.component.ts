@@ -16,7 +16,21 @@ export class HomeComponent implements OnInit {
     description: 'Some of these gems have hidden qualities inside them that make it shine beyond their lustre. The Dodecahedron gem is one of them.',
     fullImagePath: './assets/gem-01.gif',
     inventory: 10,
-    colors: ["red,","green","blue"]
+    colors: ["red,","green","blue"],
+    reviews: [{
+      id: 1,
+      createdate: 'Tuesday',
+      author: 'joe@codingtemple.com',
+      rating: 5,
+      body: 'I love this product!'
+  },
+   {
+       id: 2,
+       createdate: 'Wednesday',
+       author: 'ripalp@codingtemple.com',
+       rating: 1,
+       body: 'I hate this product'
+   }]
 }, {
   id: 2,
   name: 'Pentagonal',
