@@ -1,15 +1,13 @@
 
 
-<div>
-
-  <!-- {{gem.id}}
+<!-- <div>
+  {{gem.id}}
   {{gem.name}}
   {{gem.price | currency}}
   {{gem.description}} -->
-  <!-- <img src="{{gem.fullImagePath}}" alt="{{gem.name}}"> -->
-  <!-- <img [src] = "gem.fullImagePath" [alt]="gem.name"> -->
-
-</div>
+  <!-- <img src="{{gem.fullImagePath}}" alt="{{gem.name}}">
+  <img [src] = "gem.fullImagePath" [alt]="gem.name"> -->
+<!-- </div> -->
 
 <app-tabs [gem] = "gem"></app-tabs>
 
@@ -19,18 +17,22 @@
       <h5 class="card-title">{{gem.name}}</h5>
       <p class="card-text">{{gem.description}}</p>
       <p class="card-text">{{gem.price || currency}}</p>
-      <p class="card-text">Available colors</p>   
-        <ul class="card-text">
-          <li *ngFor = "let color of gem.colors">{{color}}</li>
-        </ul>   
-    </div>
+      <p class="card-text">Available colors</p> <!--This is the header for our list-->  
+        <!-- <ul class="card-text">
+          <li *ngFor = "let color of gem.colors">{{color}}</li> This is how we iterate through the list
+        </ul>    -->
 
+        <!--The code below takes the unordered list ('ul') from above and converts it into a <select><option></option></select>. Without the code below, we will only have an unordered list. -->
     <select class="form-control">
       <option *ngFor="let color of gem.colors">{{color}}</option>
     </select>
+    </div>
+
+    
     
     <button *ngIf="gem.inventory > 0" class="btn btn-default" (click) = "addToCart()"> Add To Cart</button>
 
     <button *ngIf="gem.inventory <= 0" class="btn btn-danger" disabled>Sold Out</button>
+   
 </div> 
 

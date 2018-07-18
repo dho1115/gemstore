@@ -7,18 +7,16 @@ import {GemModel} from '../gem-model'
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
-
-
   @Input() gem: GemModel;
-  tab: number;
+  tab: number; 
   setTab(selectedTab: number) {
-    this.tab =selectedTab;
+    this.tab =selectedTab; //This function will cause whatever tab (1,2 or 3) to be set to blue, depending which one the user clicks on.
   };
 
   constructor() { }
 
   ngOnInit() {
-    this.tab = 1;
+    this.tab = 1; //This will set the 1st tab (Description) to be set to blue as soon as the page renders on the screen.
   }
 
 }

@@ -1,8 +1,14 @@
+
+body {
+    background-color: antiquewhite;
+}
+
 p {
     color: red;
+    border: 1px solid gray;
 } 
 
 h1 {
     background-color: yellow;
     text-align: center;
-}
+} 

@@ -11,8 +11,8 @@ export class HomeComponent implements OnInit {
 
   homeGems: GemModel[] = [{
     id: 1,
-    name: 'Dodecahedron/',
-    price: 5.95,
+    name: 'Dodecahedron',
+    price: 35.95,
     description: 'Some of these gems have hidden qualities inside them that make it shine beyond their lustre. The Dodecahedron gem is one of them.',
     fullImagePath: './assets/gem-01.gif',
     inventory: 10,
@@ -22,18 +22,19 @@ export class HomeComponent implements OnInit {
   name: 'Pentagonal',
   price: 15.95,
   description: 'Some of these PENTAGONAL GEMS have BEAUTIFUL qualities inside them that make it shine beyond their lustre. The PENTAGONAL gem is one of them.',
-  fullImagePath: './assets/gem-01.gif',
+  fullImagePath: './assets/gem-02.gif',
   inventory: 7,
   colors: ["red","orange","blue"]
 }, {
   id: 3,
   name: 'Hexagonal',
-  price: 25.95,
+  price: 79.25,
   description: 'Some of these HEXAGONAL GEMSTONES have hidden qualities inside them that make it shine BEYOND THEIR YEARS! The HEXAGONAL gem is one of them.',
-  fullImagePath: './assets/gem-01.gif',
+  fullImagePath: './assets/gem-05.gif',
   inventory: 0,
   colors: ["maroon","violet","Ivory"]
 }];
+
   constructor() { }
 
   ngOnInit() {
