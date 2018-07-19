@@ -14,7 +14,8 @@
   <h3>DOG OBJECT... {{obj}}</h3> -->
 
   <app-navbar></app-navbar>
-  <app-home></app-home>    
+  <!-- <app-home [cart] = "cart"></app-home> replaced with <router-outlet>    -->
+  <router-outlet></router-outlet> <!--Anything that comes in will default to home component.-->
 </body>
 
 

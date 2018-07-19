@@ -7,7 +7,8 @@ import {GemModel} from '../gem-model'
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
-  @Input() gem: GemModel;
+  @Input() 
+  gem: GemModel;
   tab: number; 
   setTab(selectedTab: number) {
     this.tab =selectedTab; //This function will cause whatever tab (1,2 or 3) to be set to blue, depending which one the user clicks on.

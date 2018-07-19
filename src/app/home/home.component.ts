@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {GemModel} from '../gem-model';
 import { removeDebugNodeFromIndex } from '../../../node_modules/@angular/core/src/debug/debug_node';
+
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { CartModel } from '../cart-model';
 
 @Component({
   selector: 'app-home',
@@ -8,50 +11,19 @@ import { removeDebugNodeFromIndex } from '../../../node_modules/@angular/core/sr
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  @Input()
+  cart: CartModel;
 
-  homeGems: GemModel[] = [{
-    id: 1,
-    name: 'Dodecahedron',
-    price: 35.95,
-    description: 'Some of these gems have hidden qualities inside them that make it shine beyond their lustre. The Dodecahedron gem is one of them.',
-    fullImagePath: './assets/gem-01.gif',
-    inventory: 10,
-    colors: ["red,","green","blue"],
-    reviews: [{
-      id: 1,
-      createddate: 'Tuesday',
-      author: 'joe@codingtemple.com',
-      rating: 5,
-      body: 'I love this product!'
-  },
-   {
-       id: 2,
-       createddate: 'Wednesday',
-       author: 'ripalp@codingtemple.com',
-       rating: 1,
-       body: 'I hate this product'
-   }]
-}, {
-  id: 2,
-  name: 'Pentagonal',
-  price: 15.95,
-  description: 'Some of these PENTAGONAL GEMS have BEAUTIFUL qualities inside them that make it shine beyond their lustre. The PENTAGONAL gem is one of them.',
-  fullImagePath: './assets/gem-02.gif',
-  inventory: 7,
-  colors: ["red","orange","blue"]
-}, {
-  id: 3,
-  name: 'Hexagonal',
-  price: 79.25,
-  description: 'Some of these HEXAGONAL GEMSTONES have hidden qualities inside them that make it shine BEYOND THEIR YEARS! The HEXAGONAL gem is one of them.',
-  fullImagePath: './assets/gem-05.gif',
-  inventory: 0,
-  colors: ["maroon","violet","Ivory"]
-}];
-
-  constructor() { }
+  homeGems: GemModel[];
+  
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
+    console.log(JSON.stringify(this.homeGems));
+    
+    this.httpClient.get('./assets/gems.json');
+
+    this.httpClient.get<GemModel[]>('./assets/gems.JSON').subscribe((results) => {this.homeGems = results}) //this code will cause the program to not get the data if there are no users requesting it.
   }
 
 }

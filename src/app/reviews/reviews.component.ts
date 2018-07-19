@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { GemModel } from '../gem-model';
 //import { TouchSequence } from '../../../node_modules/@types/selenium-webdriver';
 import { ReviewModel } from '../review-model';
-import {AvatarService} from '../avatar.service'
+import { AvatarService } from '../avatar.service';
 
 @Component({
   selector: 'app-reviews',
@@ -14,9 +14,9 @@ export class ReviewsComponent implements OnInit {
 
   @Input() 
   gem: GemModel;
-  newReview: ReviewModel;
+  newReview: ReviewModel; //this is similar to creating an instance of ReviewModel? ReviewModel newReview = new ReviewModel()?
 
-  constructor() { }
+  constructor(private avatarService: AvatarService) { }
  
   ngOnInit() {
       this.newReview = {
@@ -42,8 +42,5 @@ export class ReviewsComponent implements OnInit {
         author: "",
         body: ""
       }
-    } 
-  
-   
-  
+    }     
 }

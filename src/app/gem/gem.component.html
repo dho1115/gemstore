@@ -14,7 +14,9 @@
     <div class="card-body">
       <h5 class="card-title">{{gem.name}}</h5>
       <p class="card-text">{{gem.price || currency}}</p>
+
       <app-tabs [gem]="gem"></app-tabs>
+      
       <select class="form-control">
       <option *ngFor="let color of gem.colors">{{color}}</option>
       </select>
